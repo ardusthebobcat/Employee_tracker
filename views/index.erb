@@ -1,0 +1,25 @@
+Q 1`<h1>Employee Tracker</h1>
+
+<% if @projects.any?() %>
+  <% @projects.each() do |project| %>
+    <ul>
+      <li><a href="/project/<%= project.id() %>"><%= project.name() %></a></li>
+    </ul>
+  <% end %>
+<% else %>
+
+  <h3>You have no projects</h3>
+
+<% end %>
+
+<div class = "form_container">
+  <form action="/project/new" method = "post">
+    <label for="name">Name of the project: </label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="description">Description: </label>
+    <input type="text" id="description" name="description"><br><br>
+
+    <button type="submit">Add Project</button>
+  </form>
+</div>

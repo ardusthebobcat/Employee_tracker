@@ -3,5 +3,5 @@ development:
   database: employee_tracker_development
 
 test:
-  adapter: postgresl
+  adapter: postgresql
   database: employee_tracker_test
